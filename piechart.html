@@ -16,8 +16,8 @@
             font-weight: italic;
          }
       </style>
-      <!-- js/d3.min.js  -->
-      <script type = "text/javascript" src = "https://d3js.org/d3.v5.min.js"></script>
+      <!-- https://d3js.org/d3.v5.min.js   -->
+      <script type = "text/javascript" src = "js/d3.min.js"></script>
    </head>
 
    <body>
@@ -45,10 +45,10 @@
          var label = d3.arc()
             .outerRadius(radius).innerRadius(radius - 80);
          
-         d3.csv("population.csv", function(error, data) {
-            if (error) {
-               throw error;
-            }
+         d3.csv("population.csv", function(data) {
+            //if (error) {
+            //   throw error;
+            //}
             
             var arc = g.selectAll(".arc")
                .data(pie(data))
