@@ -45,11 +45,8 @@
          var label = d3.arc()
             .outerRadius(radius)
             .innerRadius(radius - 80);
-        
-         d3.csv("population.csv", function(error, data) {
-            if (error) {
-               throw error;
-            }
+   
+         d3.csv("population.csv").then(function(data) {
             
             var arc = g.selectAll(".arc")
                .data(pie(data))
