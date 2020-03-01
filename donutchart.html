@@ -46,7 +46,7 @@
             .outerRadius(radius)
             .innerRadius(radius - 80);
    
-         d3.csv("population.csv").then(function(data) {
+         d3.csv("populations.csv").then(function(data) {
             
             var arc = g.selectAll(".arc")
                .data(pie(data))
